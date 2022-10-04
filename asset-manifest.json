@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kwetter/static/css/main.fefef1ed.css",
+    "main.js": "/kwetter/static/js/main.a25117e9.js",
+    "static/js/496.1b13ff76.chunk.js": "/kwetter/static/js/496.1b13ff76.chunk.js",
+    "index.html": "/kwetter/index.html",
+    "main.fefef1ed.css.map": "/kwetter/static/css/main.fefef1ed.css.map",
+    "main.a25117e9.js.map": "/kwetter/static/js/main.a25117e9.js.map",
+    "496.1b13ff76.chunk.js.map": "/kwetter/static/js/496.1b13ff76.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fefef1ed.css",
+    "static/js/main.a25117e9.js"
+  ]
+}
