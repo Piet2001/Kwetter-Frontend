@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <div className="header-wrapper">
       <Navbar className="navbar" expand="lg">
-        <Link className="link" to="/Kwetter-Frontend">
+        <Link className="link" to="/">
           <Navbar.Brand>
             <FaHome id="icon" size={50} />
           </Navbar.Brand>
