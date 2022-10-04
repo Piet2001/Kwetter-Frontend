@@ -5,6 +5,7 @@ function NotFound() {
         <div id="Container">
             <h1>404 Not Found</h1>
             <body>
+                Deze pagina is (nog) niet beschikbaar.
                 <img src={"https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/not-found-t.jpg"} alt="404" />
             </body>
         </div >
