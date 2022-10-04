@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <div className="header-wrapper">
       <Navbar className="navbar" expand="lg">
-        <Link className="link" to="/">
+        <Link className="link" to="/Kwetter-Frontend">
           <Navbar.Brand>
             <FaHome id="icon" size={50} />
           </Navbar.Brand>
@@ -17,7 +17,7 @@ const Header = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Link className="link" to="/profile" >
+            <Link className="link" to="/Kwetter-Frontend/profile" >
               <BsPersonFill id="icon" size={50} />
             </Link>
           </Nav>
