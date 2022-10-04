@@ -1,0 +1,21 @@
+.app-wrapper {
+  height: 100%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+}
+
+.footer-wrapper {
+  margin-top: auto;
+}
+
+#timer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  color: white;
+  background-color: blue;
+}
