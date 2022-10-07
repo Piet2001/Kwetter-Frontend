@@ -1,0 +1,19 @@
+.UserAccount {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+}
+
+.profileImage {
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+
+.OwnKweets {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+}

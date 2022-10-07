@@ -1,78 +1,58 @@
 import React, { useState } from "react";
+import { MockData_GeneralKweets, MockData_UserKweets } from "../../MockData/Kweets";
+import { MockData_Trends } from "../../MockData/Trends";
+import { MockData_User } from "../../MockData/User";
+import { timeAgo } from "../../Services/Time";
+import KweetCard from "../Cards/KweetCard";
 import "./Home.css"
 
 const Home = (props) => {
-    const [tweets] = useState([
-        {
-            "tweet": "Item 1"
-        },
-        {
-            "tweet": "Item 2"
-        },
-        {
-            "tweet": "Item 3"
-        }
-    ])
-
-    const [trends] = useState([{
-        "name": "Testing"
-    },
-    {
-        "name": "Programming"
-    },
-    {
-        "name": "work"
-    }])
-
-    const [user] = useState({
-        "name": "kweeter",
-        "Kweets": 87,
-        "following": 23,
-        "followers": 2
-    })
+    const [kweets] = useState(MockData_GeneralKweets)
+    const [trends] = useState(MockData_Trends)
+    const [user] = useState(MockData_User)
+    const [ownKweets] = useState(MockData_UserKweets)
+    const lastKweet = ownKweets.sort((a, b) => (a.timestamp < b.timestamp) ? 1 : -1)[0]
 
     return (
         <div id="Container">
-            <div class="searchbar">
+            <div className="searchbar">
                 <input type={"text"} placeholder={"Search"} />
             </div>
-            <div class="column left">
-                <div class="happening">
+            <div className="column left">
+                <div className="happening">
                     <p>
                         Wat gebeurd er momenteel: <br />
                         <textarea id="happening" />
                     </p>
                 </div>
-                <div class="Feed">
+                <div className="Feed">
                     Timeline:
-                    <ul>
-                        {(() => {
-                            return (
-                                tweets.map((tweet) => {
-                                    return (
-                                        <li>{tweet.tweet}</li>
-                                    )
-                                })
-                            )
-                        })()}
-                    </ul>
+                    {(() => {
+                        return (
+                            kweets.map((kweet) => {
+                                return (
+                                    <KweetCard data={kweet} />
+                                )
+                            })
+                        )
+                    })()}
                 </div>
 
             </div>
-            <div class="column right">
-                <div class="user">
-                    Your kweets: {user.Kweets}<br />
-                    1 hour ago: I'm programming!<br />
+            <div className="column right">
+                <div className="user">
+                    Your kweets: {user.kweets}<br />
+                    {timeAgo(lastKweet.timestamp)} ago: {lastKweet.kweet}<br />
                     <br />
-                    <div class="column left">
-                        Following {user.following}
+                    <div className="column left">
+                        Following {user.following.length}
                     </div>
-                    <div class="column right">
-                        Followers {user.followers}
+                    <div className="column right">
+                        Followers {user.followers.length}
                     </div>
                 </div>
                 <br />
-                <div class="trends">
+                <div className="trends">
                     Trends:<br />
                     <ul>
                         {(() => {

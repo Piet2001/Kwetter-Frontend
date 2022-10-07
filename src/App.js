@@ -4,6 +4,7 @@ import Home from "./components/Home/Home"
 import React from "react";
 import './App.css';
 import NotFound from "./components/Default/NotFound";
+import Profile from "./components/Profile/Profile";
 
 function App() {
 
@@ -13,6 +14,11 @@ function App() {
         <Route path='/Kwetter-Frontend' element={
           <Layout>
             <Home />
+          </Layout>}
+        />
+        <Route path='/Kwetter-Frontend/profile' element={
+          <Layout>
+            <Profile />
           </Layout>}
         />
         <Route path="*" element={
