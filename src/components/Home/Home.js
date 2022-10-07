@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css"
 
 const Home = (props) => {
+    const [tweets] = useState([
+        {
+            "tweet": "Item 1"
+        },
+        {
+            "tweet": "Item 2"
+        },
+        {
+            "tweet": "Item 3"
+        }
+    ])
+
+    const [trends] = useState([{
+        "name": "Testing"
+    },
+    {
+        "name": "Programming"
+    },
+    {
+        "name": "work"
+    }])
+
+    const [user] = useState({
+        "name": "kweeter",
+        "Kweets": 87,
+        "following": 23,
+        "followers": 2
+    })
 
     return (
         <div id="Container">
@@ -18,36 +46,44 @@ const Home = (props) => {
                 <div class="Feed">
                     Timeline:
                     <ul>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
-                        <li>item</li>
+                        {(() => {
+                            return (
+                                tweets.map((tweet) => {
+                                    return (
+                                        <li>{tweet.tweet}</li>
+                                    )
+                                })
+                            )
+                        })()}
                     </ul>
                 </div>
 
             </div>
             <div class="column right">
                 <div class="user">
-                    Your kweets: 87<br />
+                    Your kweets: {user.Kweets}<br />
                     1 hour ago: I'm programming!<br />
                     <br />
                     <div class="column left">
-                        Following 23
+                        Following {user.following}
                     </div>
                     <div class="column right">
-                        Followers 2
+                        Followers {user.followers}
                     </div>
                 </div>
                 <br />
                 <div class="trends">
                     Trends:<br />
                     <ul>
-                        #testing<br />
-                        #progremming<br />
-                        #work<br />
+                        {(() => {
+                            return (
+                                trends.map((trend) => {
+                                    return (
+                                        <> #{trend.name}<br /></>
+                                    )
+                                })
+                            )
+                        })()}
                     </ul>
                 </div>
             </div>
