@@ -1,6 +1,5 @@
-## MKS Dashboard
+# Kwetter-Frontend
 
-![](https://tokei.rs/b1/github/MKS-Dashboard/mks-dashboard.github.io)
 
 ## Getting Started with Create React App
 
