@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.fefef1ed.css",
-    "main.js": "./static/js/main.3ce60012.js",
-    "static/js/496.1b13ff76.chunk.js": "./static/js/496.1b13ff76.chunk.js",
-    "index.html": "./index.html",
-    "main.fefef1ed.css.map": "./static/css/main.fefef1ed.css.map",
-    "main.3ce60012.js.map": "./static/js/main.3ce60012.js.map",
-    "496.1b13ff76.chunk.js.map": "./static/js/496.1b13ff76.chunk.js.map"
+    "main.css": "/Kwetter-Frontend/static/css/main.b55c8909.css",
+    "main.js": "/Kwetter-Frontend/static/js/main.49978490.js",
+    "static/js/496.50e86a99.chunk.js": "/Kwetter-Frontend/static/js/496.50e86a99.chunk.js",
+    "index.html": "/Kwetter-Frontend/index.html",
+    "main.b55c8909.css.map": "/Kwetter-Frontend/static/css/main.b55c8909.css.map",
+    "main.49978490.js.map": "/Kwetter-Frontend/static/js/main.49978490.js.map",
+    "496.50e86a99.chunk.js.map": "/Kwetter-Frontend/static/js/496.50e86a99.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fefef1ed.css",
-    "static/js/main.3ce60012.js"
+    "static/css/main.b55c8909.css",
+    "static/js/main.49978490.js"
   ]
 }
