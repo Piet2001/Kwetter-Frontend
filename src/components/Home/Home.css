@@ -1,0 +1,58 @@
+.column {
+    float: left;
+    width: 50%;
+}
+
+p {
+    padding-left: 5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 50%;
+    background-color: #aaa;
+}
+
+.right {
+    width: 50%;
+    background-color: #bbb;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.searchbar {
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.user {
+    margin: 10px;
+}
+
+.trends {
+    padding-top: 10px;
+    margin: 10px;
+}
