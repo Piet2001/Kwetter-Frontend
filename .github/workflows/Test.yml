@@ -29,9 +29,9 @@ jobs:
     - name: Make envfile
       uses: SpicyPizza/create-envfile@v1.3
       with:
-        REACT_APP_KWETTER_TENANT_ID= ${{ secrets.REACT_APP_KWETTER_TENANT_ID }}
-        REACT_APP_KWETTER_FRONTEND_ID= ${{ secrets.REACT_APP_KWETTER_FRONTEND_ID }}
-        REACT_APP_USER_API= ${{ secrets.REACT_APP_USER_API }}
+        REACT_APP_KWETTER_TENANT_ID: ${{ secrets.REACT_APP_KWETTER_TENANT_ID }}
+        REACT_APP_KWETTER_FRONTEND_ID: ${{ secrets.REACT_APP_KWETTER_FRONTEND_ID }}
+        REACT_APP_USER_API: ${{ secrets.REACT_APP_USER_API }}
     
     - run: npm ci
     - run: npm run build --if-present
