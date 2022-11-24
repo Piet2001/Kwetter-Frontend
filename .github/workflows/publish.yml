@@ -19,6 +19,11 @@ jobs:
 
       - name: Install and build
         run: npm install && npm run build
+        env:
+          REACT_APP_KWETTER_TENANT_ID= ${{ secrets.REACT_APP_KWETTER_TENANT_ID }}
+          REACT_APP_KWETTER_FRONTEND_ID= ${{ secrets.REACT_APP_KWETTER_FRONTEND_ID }}
+          REACT_APP_USER_API= ${{ secrets.REACT_APP_USER_API }}
+
       
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
