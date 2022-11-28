@@ -65,20 +65,20 @@ export const protectedResources = {
         scopes: ["User.Read"],
     },
     // apiActivity: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "http://vitaappgw.northeurope.cloudapp.azure.com/activity/" : "http://localhost:5000/activity/",
-    //     scopes: ["api://fbb04eec-10f5-4677-b91e-b366a1e0303a/Activity.All"], // e.g. api://xxxxxx/access_as_user
+    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/activity/",
+    //     scopes: ["api://{id}/Activity.All"], // e.g. api://xxxxxx/access_as_user
     // },
     // apiUser: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "http://vitaappgw.northeurope.cloudapp.azure.com/user/" : "http://localhost:5000/user/",
-    //     scopes: ["api://82b5a9e1-eaa2-4ee8-a3a0-7d3c41a4a1b5/User.All"]
+    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/user/",
+    //     scopes: ["api://{id}/User.All"]
     // },
     // apiBadge: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "http://vitaappgw.northeurope.cloudapp.azure.com/badge/" : "http://localhost:5000/badge/",
-    //     scopes: ["api://787cafa0-a56b-429c-a0a2-d67f139b2c64/Badge.All"]
+    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/badge/",
+    //     scopes: ["api://{id}/Badge.All"]
     // },
     // apiChallenge: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "http://vitaappgw.northeurope.cloudapp.azure.com/challenge/" : "http://localhost:5000/challenge/",
-    //     scopes: ["api://15e8abf0-9951-4e65-9d1c-1d14b82e6268/Challenge.All"]
+    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/challenge/",
+    //     scopes: ["api://{id}/Challenge.All"]
     // }
 }
 
