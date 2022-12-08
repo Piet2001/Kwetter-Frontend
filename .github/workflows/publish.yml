@@ -5,6 +5,10 @@ on:
     branches:
       - "main"
 
+env:
+  REGISTRY: ghcr.io
+  FRONTEND_TAG_PUSH: ghcr.io/piet2001/kwetter-frontend:${{ github.sha }}      
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,4 +33,11 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.        
+          folder: build # The folder the action should deploy.  ''
+
+      - name: Build & push  
+        uses: docker/build-push-action@v2
+        with:
+          context: /
+          push: true
+          tags: ${{ env.FRONTEND_TAG_PUSH }}      

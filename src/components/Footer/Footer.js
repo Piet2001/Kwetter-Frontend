@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <p className="footer-text">
-                © Copyright {new Date().getFullYear()} | Kwetter | {useIsAuthenticated ? <button onClick={() => { handleLogout() }}>klik</button> : ""}
+                © Copyright {new Date().getFullYear()} | Kwetter | {useIsAuthenticated ? <button onClick={() => { handleLogout() }}>uitloggen</button> : ""}
             </p>
         </div>
     );
