@@ -27,6 +27,7 @@ function Home(props) {
             await PostMessage(accessToken, happeningText)
             var newMessageList = await GetAllMessages(accessToken)
             setKweets(newMessageList.reverse())
+            document.getElementById('happening').value = ""
         }
     }
 
