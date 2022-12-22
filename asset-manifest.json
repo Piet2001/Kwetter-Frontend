@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Kwetter-Frontend/static/css/main.b55c8909.css",
-    "main.js": "/Kwetter-Frontend/static/js/main.6adb08fa.js",
+    "main.js": "/Kwetter-Frontend/static/js/main.db0ccba0.js",
     "static/js/496.c5766d5d.chunk.js": "/Kwetter-Frontend/static/js/496.c5766d5d.chunk.js",
     "index.html": "/Kwetter-Frontend/index.html",
     "main.b55c8909.css.map": "/Kwetter-Frontend/static/css/main.b55c8909.css.map",
-    "main.6adb08fa.js.map": "/Kwetter-Frontend/static/js/main.6adb08fa.js.map",
+    "main.db0ccba0.js.map": "/Kwetter-Frontend/static/js/main.db0ccba0.js.map",
     "496.c5766d5d.chunk.js.map": "/Kwetter-Frontend/static/js/496.c5766d5d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b55c8909.css",
-    "static/js/main.6adb08fa.js"
+    "static/js/main.db0ccba0.js"
   ]
 }
