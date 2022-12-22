@@ -1,17 +1,74 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MockData_GeneralKweets, MockData_UserKweets } from "../../MockData/Kweets";
 import { MockData_Trends } from "../../MockData/Trends";
 import { MockData_User } from "../../MockData/User";
 import { timeAgo } from "../../Services/Time";
 import KweetCard from "../Cards/KweetCard";
 import "./Home.css"
+import { GetAllMessages, PostMessage } from "../../Services/MessageService";
+import { loginRequest } from "../../authConfig";
+import { useMsal } from "@azure/msal-react";
 
-const Home = (props) => {
-    const [kweets] = useState(MockData_GeneralKweets)
+function Home(props) {
+    const { instance, accounts } = useMsal();
+    const [kweets, setKweets] = useState(MockData_GeneralKweets)
     const [trends] = useState(MockData_Trends)
     const [user] = useState(MockData_User)
     const [ownKweets] = useState(MockData_UserKweets)
     const lastKweet = ownKweets.sort((a, b) => (a.timestamp < b.timestamp) ? 1 : -1)[0]
+    const [happeningText, setHappeningTest] = useState("")
+
+    const handleSubmit = async () => {
+        if (happeningText === "" || happeningText === undefined) {
+            alert(`Je moet eerst een bericht maken om te versturen`)
+        }
+        else {
+            var accessToken = await getAccessToken();
+            await PostMessage(accessToken, happeningText)
+            var newMessageList = await GetAllMessages(accessToken)
+            setKweets(newMessageList.reverse())
+        }
+    }
+
+    async function getAccessToken() {
+
+        const request = {
+            ...loginRequest,
+            account: accounts[0]
+        };
+        var token = ""
+        await instance.acquireTokenSilent(request)
+            .then((response) => {
+                token = response.accessToken
+            })
+        return token
+    }
+
+    useEffect(() => {
+        getMessages()
+
+        async function getMessages() {
+            var accessToken = await getAccessToken2();
+            var response = await GetAllMessages(accessToken)
+            setKweets(response.reverse())
+        }
+
+
+        async function getAccessToken2() {
+
+            const request = {
+                ...loginRequest,
+                account: accounts[0]
+            };
+            var token = ""
+            await instance.acquireTokenSilent(request)
+                .then((response) => {
+                    token = response.accessToken
+                })
+            return token
+        }
+
+    }, [instance, accounts]);
 
     return (
         <div id="Container">
@@ -22,8 +79,10 @@ const Home = (props) => {
                 <div className="happening">
                     <p>
                         Wat gebeurd er momenteel: <br />
-                        <textarea id="happening" />
+                        <textarea id="happening" onChange={e => setHappeningTest(e.target.value)} />
                     </p>
+                    <button id="submit_happening" value={"submit"} onClick={handleSubmit}>Verstuur</button>
+                    <br /><br />
                 </div>
                 <div className="Feed">
                     Timeline:
@@ -31,7 +90,7 @@ const Home = (props) => {
                         return (
                             kweets.map((kweet) => {
                                 return (
-                                    <KweetCard data={kweet} />
+                                    <KweetCard id={kweet.id} data={kweet} />
                                 )
                             })
                         )
