@@ -27,6 +27,8 @@ jobs:
           REACT_APP_KWETTER_TENANT_ID: ${{ secrets.REACT_APP_KWETTER_TENANT_ID }}
           REACT_APP_KWETTER_FRONTEND_ID: ${{ secrets.REACT_APP_KWETTER_FRONTEND_ID }}
           REACT_APP_USER_API: ${{ secrets.REACT_APP_USER_API }}
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          REACT_APP_MESSAGE_API: ${{ secrets.REACT_APP_MESSAGE_API }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
