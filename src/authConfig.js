@@ -65,11 +65,11 @@ export const protectedResources = {
         scopes: ["User.Read"],
     },
     apiMessage: {
-        endpoint: process.env.NODE_ENV === 'production' ? `${process.env.REACT_APP_API_URL}/message/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/message/"
+        endpoint: process.env.NODE_ENV === 'production' ? `${process.env.REACT_APP_API_URL}/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/message/"
         scopes: [process.env.REACT_APP_MESSAGE_API], // e.g. api://xxxxxx/access_as_user
     },
     apiUser: {
-        endpoint: process.env.NODE_ENV === 'production' ? `${process.env.REACT_APP_API_URL}/user/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/user/"
+        endpoint: process.env.NODE_ENV === 'production' ? `${process.env.REACT_APP_API_URL}/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/user/"
         scopes: [process.env.REACT_APP_MESSAGE_API], // e.g. api://xxxxxx/access_as_user
     },
 }
