@@ -15,7 +15,6 @@ import Login from "./components/Default/Login";
 function App() {
 
   const ProtectedRoute = ({ children }) => {
-    console.log(useIsAuthenticated())
     if (!useIsAuthenticated()) {
       return <Layout><Login /></Layout>;
     }

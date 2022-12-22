@@ -1,18 +1,21 @@
 import React from 'react'
 import "./Cards.css"
-import { timeAgo } from "../../Services/Time"
+//import { timeAgo } from "../../Services/Time"
 
 function KweetCard(props) {
     return (
-        <div class="kweetCard">
+        <div className="kweetCard">
             <p>
-                {props.data.kweet}<br />
-                <label title={new Date(props.data.timestamp).toLocaleString()}>
-                    {timeAgo(props.data.timestamp)} ago
-                </label>
+                {props.data.message.toLocaleString()}<br />
+
             </p>
         </div>
     )
 }
 
 export default KweetCard
+
+
+//    < label title = { new Date(props.data.timestamp).toLocaleString() } >
+ //       { timeAgo(props.data.timestamp) } ago
+  //              </label >

@@ -64,21 +64,13 @@ export const protectedResources = {
         endpoint: "https://graph.microsoft.com/v1.0/me",
         scopes: ["User.Read"],
     },
-    // apiActivity: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/activity/",
-    //     scopes: ["api://{id}/Activity.All"], // e.g. api://xxxxxx/access_as_user
-    // },
-    // apiUser: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/user/",
-    //     scopes: ["api://{id}/User.All"]
-    // },
-    // apiBadge: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/badge/",
-    //     scopes: ["api://{id}/Badge.All"]
-    // },
-    // apiChallenge: {
-    //     endpoint: process.env.NODE_ENV === 'production' ? "{url}" : "http://localhost:5000/challenge/",
-    //     scopes: ["api://{id}/Challenge.All"]
-    // }
+    apiMessage: {
+        endpoint: process.env.NODE_ENV === 'production' ? `http://${process.env.REACT_APP_API_URL}/message/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/message/"
+        scopes: [process.env.REACT_APP_MESSAGE_API], // e.g. api://xxxxxx/access_as_user
+    },
+    apiUser: {
+        endpoint: process.env.NODE_ENV === 'production' ? `${process.env.REACT_APP_API_URL}/user/` : `${process.env.REACT_APP_API_URL}`, //"http://localhost:5000/user/"
+        scopes: [process.env.REACT_APP_MESSAGE_API], // e.g. api://xxxxxx/access_as_user
+    },
 }
 
