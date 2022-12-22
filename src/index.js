@@ -24,8 +24,6 @@ msalInstance
     });
 
 const handleLogin = async (accessToken) => {
-    alert(`test`)
-    console.log(`token: ${accessToken}`)
     // var firstLogin = await checkUser(accessToken);
     // localStorage.setItem("firstLogin", firstLogin)
     // var user = await getUser(accessToken);
