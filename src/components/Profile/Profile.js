@@ -15,7 +15,7 @@ function Profile() {
         <div id='Container'>
             <div className="column left">
                 <div className="UserAccount">
-                    <img src='https://www.multisignaal.nl/wp-content/uploads/2021/08/blank-profile-picture-973460_1280.png' alt="profile" class="profileImage" />
+                    <img src='https://www.multisignaal.nl/wp-content/uploads/2021/08/blank-profile-picture-973460_1280.png' alt="profile" className="profileImage" />
                     <label className="UserName">{user.name}</label>
                 </div>
                 <br /><br /><br /><br />
@@ -23,7 +23,7 @@ function Profile() {
                     {(() => {
                         return (
                             ownKweets
-                                .sort((a, b) => (a.timestamp < b.timestamp) ? 1 : -1)
+                                //.sort((a, b) => (a.timestamp < b.timestamp) ? 1 : -1)
                                 .map((kweet) => {
                                     return (
                                         <KweetCard data={kweet} />
