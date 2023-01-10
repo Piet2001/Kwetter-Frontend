@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserFollowingCard(props) {
     return (
-        <div className="userStatsCard">
+        <div class="userStatsCard">
             Following:<br />
             {props.user.following}
         </div>

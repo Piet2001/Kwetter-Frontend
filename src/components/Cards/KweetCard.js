@@ -4,8 +4,7 @@ import "./Cards.css"
 
 function KweetCard(props) {
     return (
-        <div className="kweetCard" key={props.data.id}>
-            <h4>{props.data.username.toLocaleString()}</h4>
+        <div className="kweetCard">
             <p>
                 {props.data.message.toLocaleString()}<br />
 

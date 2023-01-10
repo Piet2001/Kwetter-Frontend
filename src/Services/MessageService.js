@@ -3,6 +3,8 @@ import { protectedResources } from "../authConfig";
 
 const url = protectedResources.apiMessage.endpoint;
 
+console.log(url)
+
 export async function GetdefaultMessage(token) {
     var response = await axios.get(url + "message/", {
         headers: { Authorization: `Bearer ${token}` },
