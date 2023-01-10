@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserStatsCard(props) {
     return (
-        <div class="userStatsCard">
+        <div className="userStatsCard">
             Stats:<br />
             <p>
                 {props.user.following.length} following &nbsp; &nbsp; {props.user.followers.length} followers <br />
