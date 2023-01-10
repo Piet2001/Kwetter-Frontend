@@ -2,7 +2,7 @@ import React from 'react'
 
 function UserInfoCard(props) {
     return (
-        <div class="userInfoCard">
+        <div className="userInfoCard">
             Details:<br />
             <p>
                 Name: {props.user.name} <br />
